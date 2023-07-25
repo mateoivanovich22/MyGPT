@@ -1,0 +1,20 @@
+<div id="divChat">
+    <h1>Chat Mygpt</h1>
+    <form id="message-form">
+      <div class="form-control">
+        <input class="input input-alt" placeholder="Type something intelligent" required="" type="text">
+        <span class="input-border input-border-alt"></span>
+      </div>
+
+      <button class="button" type="submit">
+          <span class="button_lg">
+              <span class="button_sl"></span>
+              <span class="button_text">Send Message</span>
+          </span>
+      </button>
+    </form>
+    <span id="respuestaHTML"></span>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/chat.js"></script>

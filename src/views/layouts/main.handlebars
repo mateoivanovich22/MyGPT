@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with GPT</title>
+    <style>
+        body {
+            background-color: #222222;
+        }
+        #divChat {
+            text-align: center;
+            padding: 73px;
+            background-color: #ffffff;
+            border-radius: 132px;
+            margin-top: 200px;
+        }
+
+      h1 {
+        font-family: Arial, sans-serif;
+        font-size: 36px;
+        color: red;
+        margin-bottom: 20px;
+      }
+
+      .input {
+        color: #fff;
+        font-size: 0.9rem;
+        background-color: transparent;
+        width: 100%;
+        box-sizing: border-box;
+        padding-inline: 0.5em;
+        padding-block: 0.7em;
+        border: none;
+        border-bottom: var(--border-height) solid var(--border-before-color);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .input-border {
+        position: absolute;
+        background: var(--border-after-color);
+        width: 0%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        transition: width 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+        }
+
+        .input:focus {
+        outline: none;
+        }
+
+        .input:focus + .input-border {
+        width: 100%;
+        }
+
+        .form-control {
+        position: relative;
+        --width-of-input: 300px;
+        padding-bottom: 10px;
+        }
+
+        .input-alt {
+        font-size: 1.2rem;
+        padding-inline: 1em;
+        padding-block: 0.8em;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .input-border-alt {
+        height: 3px;
+        background: linear-gradient(90deg, #FF6464 0%, #FFBF59 50%, #47C9FF 100%);
+        transition: width 0.4s cubic-bezier(0.42, 0, 0.58, 1.00);
+        }
+
+        .input-alt:focus + .input-border-alt {
+        width: 100%;
+        }
+        #message-form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+        }
+        .button {
+            -moz-appearance: none;
+            -webkit-appearance: none;
+            appearance: none;
+            border: none;
+            background: none;
+            color: #0f1923;
+            cursor: pointer;
+            position: relative;
+            padding: 8px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 14px;
+            transition: all .15s ease;
+            }
+
+            .button::before,
+            .button::after {
+            content: '';
+            display: block;
+            position: absolute;
+            right: 0;
+            left: 0;
+            height: calc(50% - 5px);
+            border: 1px solid #7D8082;
+            transition: all .15s ease;
+            }
+
+            .button::before {
+            top: 0;
+            border-bottom-width: 0;
+            }
+
+            .button::after {
+            bottom: 0;
+            border-top-width: 0;
+            }
+
+            .button:active,
+            .button:focus {
+            outline: none;
+            }
+
+            .button:active::before,
+            .button:active::after {
+            right: 3px;
+            left: 3px;
+            }
+
+            .button:active::before {
+            top: 3px;
+            }
+
+            .button:active::after {
+            bottom: 3px;
+            }
+
+            .button_lg {
+            position: relative;
+            display: block;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #0f1923;
+            overflow: hidden;
+            box-shadow: inset 0px 0px 0px 1px transparent;
+            }
+
+            .button_lg::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 2px;
+            height: 2px;
+            background-color: #0f1923;
+            }
+
+            .button_lg::after {
+            content: '';
+            display: block;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            width: 4px;
+            height: 4px;
+            background-color: #0f1923;
+            transition: all .2s ease;
+            }
+
+            .button_sl {
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: -1px;
+            left: -8px;
+            width: 0;
+            background-color: #ff4655;
+            transform: skew(-15deg);
+            transition: all .2s ease;
+            }
+
+            .button_text {
+            position: relative;
+            }
+
+            .button:hover {
+            color: #0f1923;
+            }
+
+            .button:hover .button_sl {
+            width: calc(100% + 15px);
+            }
+
+            .button:hover .button_lg::after {
+            background-color: #fff;
+            }
+
+        
+    </style>
+</head>
+<body>
+    {{{body}}}
+</body>
+</html>
